@@ -25,11 +25,8 @@ public class DAO {
                     + "FROM pokemon "
                     + "ORDER By IDpoke";
 
-            // Ejecutamos la consulta y nos devuelve una matriz de filas (registros) y columnas (datos)
             ResultSet resultadoConsulta = conexionBBDD.createStatement().executeQuery(SQL);
 
-            // Debemos cargar los datos en el ObservableList (Que es un ArrayList especial)
-            // Los datos que devuelve la consulta no son directamente cargables en nuestro objeto
             while (resultadoConsulta.next()) {
                 datosResultadoConsulta.add(new Pokemon(
                         resultadoConsulta.getInt("IDpoke"),
@@ -54,14 +51,11 @@ public class DAO {
         }
     }
 
-    // Alta de un nuevo producto
-    //
-    public Boolean altaProducto(Pokemon poke) {
+    public Boolean altaPokemon(Pokemon poke) {
 
         int registrosAfectadosConsulta = 0;
 
         try {
-            // Nos conectamos
             conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
             String SQL = "INSERT INTO pokemon ("
                     + " IDpoke ,"
@@ -83,11 +77,9 @@ public class DAO {
             st.setInt(5, poke.getDefense());
             st.setInt(6, poke.getSpattack());
             st.setInt(7, poke.getSpdefense());
-            st.setInt(7, poke.getSpeed());
-            st.setInt(8, poke.getDualtype());
+            st.setInt(8, poke.getSpeed());
+            st.setInt(9, poke.getDualtype());
 
-            // Ejecutamos la consulta preparada (con las ventajas de seguridad y velocidad en el servidor de BBDD
-            // nos devuelve el número de registros afectados. Al ser un Insert nos debe devolver 1 si se ha hecho correctamente
             registrosAfectadosConsulta = st.executeUpdate();
             st.close();
             conexionBBDD.close();

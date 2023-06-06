@@ -97,7 +97,7 @@ public class HelloController {
 
     public void onAltaClicked(ActionEvent actionEvent) {
         if ( pokeAux.getIDpoke() >= 0) {
-            if (pokeDAO.altaProducto(pokeAux)) {
+            if (pokeDAO.altaPokemon(pokeAux)) {
                 cargarDatosTabla();
             }
         } else {
