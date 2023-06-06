@@ -23,7 +23,7 @@ public class DAO {
             conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
             String SQL = "SELECT * "
                     + "FROM pokemon "
-                    + "ORDER By pokemon";
+                    + "ORDER By IDpoke";
 
             // Ejecutamos la consulta y nos devuelve una matriz de filas (registros) y columnas (datos)
             ResultSet resultadoConsulta = conexionBBDD.createStatement().executeQuery(SQL);
