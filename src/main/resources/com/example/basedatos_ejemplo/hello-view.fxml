@@ -162,17 +162,22 @@
             <Insets left="90.0" />
          </GridPane.margin>
       </ImageView>
-          <Button fx:id="btnActualizar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onActualizarClicked" prefHeight="54.0" prefWidth="293.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Actualizar Lista" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="10">
+          <Button fx:id="btnActualizar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onActualizarClicked" prefHeight="54.0" prefWidth="293.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Actualizar Lista" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="6">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-          <Button fx:id="btnBorrar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBorrarClicked" prefHeight="60.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Borrar Pokemon" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="6">
+          <Button fx:id="btnBorrar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBorrarClicked" prefHeight="60.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Borrar Pokemon" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
           <Button fx:id="btnAlta" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAltaClicked" prefHeight="60.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Insertar Pokemon" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnActualizar1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onImprimirListadoClick" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Imprimir Listado" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="8" GridPane.valignment="TOP">
          <font>
             <Font size="15.0" />
          </font>

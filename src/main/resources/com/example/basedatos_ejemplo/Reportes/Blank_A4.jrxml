@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="895" pageHeight="842" columnWidth="855" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="88ae15a0-6975-4d6d-a878-76cdf480addd">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cG9rZW1vbi5wb2tlbW9uIEFTICwxMTMsMzIsMWRiYzBkZmUtOTAwZC00NDRkLTg3MzktZDYyNjEx
+OWNkZDY0Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter1.xml"/>
+	<style name="Style1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2==0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#D1D1D1"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT `IDpoke`,
+	pokename,
+	`HP`,
+	attack,
+	defense,
+	spattack,
+	spdefense,
+	speed,
+	dualtype
+FROM pokemon.pokemon]]>
+	</queryString>
+	<field name="IDpoke" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="IDpoke"/>
+		<property name="com.jaspersoft.studio.field.label" value="IDpoke"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="pokename" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pokename"/>
+		<property name="com.jaspersoft.studio.field.label" value="pokename"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="HP" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="HP"/>
+		<property name="com.jaspersoft.studio.field.label" value="HP"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="attack" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="attack"/>
+		<property name="com.jaspersoft.studio.field.label" value="attack"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="defense" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="defense"/>
+		<property name="com.jaspersoft.studio.field.label" value="defense"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="spattack" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="spattack"/>
+		<property name="com.jaspersoft.studio.field.label" value="spattack"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="spdefense" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="spdefense"/>
+		<property name="com.jaspersoft.studio.field.label" value="spdefense"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="speed" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="speed"/>
+		<property name="com.jaspersoft.studio.field.label" value="speed"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<field name="dualtype" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="dualtype"/>
+		<property name="com.jaspersoft.studio.field.label" value="dualtype"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pokemon"/>
+	</field>
+	<group name="IDpoke">
+		<groupExpression><![CDATA[$F{IDpoke}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="305" y="20" width="244" height="30" uuid="4b219078-e2c8-4768-a3b3-6ad8dcd4c23b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL DIRECTORIO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="cf0ab7c9-069a-44b3-96a7-c11582fac73a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="592ec27c-4656-4872-924c-8f2628844a76"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[IDpoke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="8d8334f2-5f6f-4d49-a318-3efcc40547d6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ec18a32-c66b-46b6-9881-a57fa8108034"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[pokename]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="45699bbf-eaf8-4084-91f2-df0b5729198b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="05c8e0c3-f616-4e2f-ada0-a4c623ac8a5d"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[HP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="f0d2dfad-6931-4271-8874-804c3ac5f0b6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fa1fe8cf-b934-4090-9043-d1bfa089a476"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[attack]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="64f5e576-5d43-4d8c-96f2-d961860b6a5f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6a34e3a-54c8-4096-8718-ef12c64883d5"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[defense]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="6df03745-9433-4283-81c5-ce80ad96a233">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae00da9c-9912-4c0e-ab0d-eb7059528499"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[spattack]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="f7532586-6e3f-4d4b-8fd4-d654cd060d9e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1cc26c5e-74c8-4bce-9b09-3aed6b1880a8"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[spdefense]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="100" height="30" backcolor="#D4D4D4" uuid="5b930f03-d916-4baf-9b8e-ffcbb970678f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e804fbe-fbe8-4f14-b1b3-2ee7a186ee46"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[speed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="800" y="0" width="56" height="30" backcolor="#D4D4D4" uuid="39ea9b7c-9a1b-49a9-a916-23aa06433729">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b13403e9-e29e-4139-80e8-e122445b09ce"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[dualtype]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement style="Style1" x="0" y="0" width="100" height="30" uuid="472617ac-5864-402d-9841-6b69cd7cd868">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="592ec27c-4656-4872-924c-8f2628844a76"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{IDpoke}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="100" y="0" width="100" height="30" uuid="0be07764-aab7-4e56-872d-7e151d1ee903">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ec18a32-c66b-46b6-9881-a57fa8108034"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pokename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="200" y="0" width="100" height="30" uuid="d23de8ca-75a4-47dc-bf5c-90b97549c7d1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="05c8e0c3-f616-4e2f-ada0-a4c623ac8a5d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{HP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="300" y="0" width="100" height="30" uuid="ab02cd0e-269f-4f4d-a724-ab7a4ed80944">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fa1fe8cf-b934-4090-9043-d1bfa089a476"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{attack}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="400" y="0" width="100" height="30" uuid="a1807f8c-50f7-450a-8598-6b023e5bcb60">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6a34e3a-54c8-4096-8718-ef12c64883d5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{defense}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="500" y="0" width="100" height="30" uuid="84c508e9-d218-4e82-8c82-fa6c9ef4b518">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae00da9c-9912-4c0e-ab0d-eb7059528499"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{spattack}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="600" y="0" width="100" height="30" uuid="00711a24-a0ac-4eaa-b9d7-529f6d03f541">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1cc26c5e-74c8-4bce-9b09-3aed6b1880a8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{spdefense}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="700" y="0" width="100" height="30" uuid="262d65c0-1062-4a08-88fc-eba3246cddbe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e804fbe-fbe8-4f14-b1b3-2ee7a186ee46"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{speed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="800" y="0" width="56" height="30" uuid="c4813828-ac29-4111-a7f7-e24d52f7a898">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b13403e9-e29e-4139-80e8-e122445b09ce"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dualtype}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="785" y="0" width="15" height="30" uuid="c165eaad-d3b4-4fe9-81b5-6942f89750f2"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="820" y="0" width="30" height="30" uuid="4737b03b-34de-4940-9394-1b050c9b8031"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="800" y="0" width="20" height="30" uuid="dbc1c75a-fbba-4b93-bdb8-04e1e0a588a1"/>
+				<text><![CDATA[de]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

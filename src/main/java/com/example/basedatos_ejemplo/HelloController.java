@@ -7,7 +7,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.util.converter.NumberStringConverter;
+import net.sf.jasperreports.engine.JRException;
 
+import java.sql.SQLException;
 import java.util.Optional;
 
 public class HelloController {
@@ -169,5 +171,14 @@ public class HelloController {
             });
             return row;
         });
+    }
+    public void onImprimirListadoClick(ActionEvent actionEvent) {
+        try {
+            // --- Show Jasper Report on click-----
+            new JasperReports().showReportSimple();
+        } catch (ClassNotFoundException | JRException | SQLException e1) {
+            e1.printStackTrace();
+        }
+
     }
 }
