@@ -57,16 +57,16 @@
         <Label text="Defensa Especial" textFill="WHITE" GridPane.rowIndex="8" />
         <Label text="Velocidad" textFill="WHITE" GridPane.rowIndex="9" />
         <Label text="Tipo Doble" textFill="WHITE" GridPane.rowIndex="10" />
-        <TextField fx:id="txtID" prefHeight="25.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <TextField fx:id="txtHP" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-        <TextField fx:id="txtAtaque" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-        <TextField fx:id="txtDefensa" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-        <TextField fx:id="txtAtaqueEsp" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-        <TextField fx:id="txtDefensaEsp" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-        <TextField fx:id="txtVelocidad" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-        <TextField fx:id="txtTipo" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-        <TableView fx:id="tvPokemon" maxWidth="1.7976931348623157E308" prefHeight="520.0" prefWidth="814.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.vgrow="ALWAYS">
+        <TextField id="id" fx:id="txtID" prefHeight="25.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField id="nombre" fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField id="hp" fx:id="txtHP" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField id="ataque" fx:id="txtAtaque" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField id="defensa" fx:id="txtDefensa" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField id="ataquesp" fx:id="txtAtaqueEsp" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <TextField id="defensasp" fx:id="txtDefensaEsp" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField id="velocidad" fx:id="txtVelocidad" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <TextField id="dobletipo" fx:id="txtTipo" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <TableView id="TablaVista" fx:id="tvPokemon" maxWidth="1.7976931348623157E308" prefHeight="520.0" prefWidth="814.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.vgrow="ALWAYS">
             <columns>
                 <TableColumn fx:id="tcId" text="ID Pokedex" />
                 <TableColumn fx:id="tcNombre" prefWidth="105.0" text="Nombre" />
@@ -172,7 +172,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-          <Button fx:id="btnAlta" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAltaClicked" prefHeight="60.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Insertar Pokemon" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+          <Button id="insertar" fx:id="btnAlta" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAltaClicked" prefHeight="60.0" style="-fx-background-color: #006485; -fx-border-color: #64a3a2; -fx-border-width: 2px;" text="Insertar Pokemon" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
          <font>
             <Font size="15.0" />
          </font>
