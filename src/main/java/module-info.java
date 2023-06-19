@@ -4,7 +4,7 @@ module com.example.basedatos_ejemplo {
     requires java.sql;
     requires java.desktop;
     requires jasperreports;
-    requires org.junit.jupiter.api;
+
 
 
     opens com.example.basedatos_ejemplo to javafx.fxml;

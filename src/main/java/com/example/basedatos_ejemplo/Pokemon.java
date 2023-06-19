@@ -119,7 +119,19 @@ public class Pokemon {
     public void setDualtype(int dualtype) {
         this.dualtype.set(dualtype);
     }
-
+/**
+ * Crea un nuevo objeto Pokemon con los valores especificados.
+ *
+ * @param IDpoke    El ID del Pokemon.
+ * @param pokename  El nombre del Pokemon.
+ * @param HP        Los puntos de vida del Pokemon.
+ * @param attack    El valor de ataque del Pokemon.
+ * @param defense   El valor de defensa del Pokemon.
+ * @param spattack  El valor de ataque especial del Pokemon.
+ * @param spdefense El valor de defensa especial del Pokemon.
+ * @param speed     La velocidad del Pokemon.
+ * @param dualtype  Si el pokemon tiene tipo dual.
+ */
     public Pokemon(Integer IDpoke, String pokename, Integer HP, Integer attack, Integer defense,
                    Integer spattack, Integer spdefense, Integer speed, Integer dualtype){
         this.IDpoke = new SimpleIntegerProperty(IDpoke);

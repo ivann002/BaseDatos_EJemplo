@@ -70,9 +70,11 @@ public class HelloController {
     private ImageView Image;
 
 
-
-
-
+    /**
+     * Inicializa el programa realizando una serie de tareas.
+     * Este método realiza un doble clic, carga los datos de la tabla,
+     * crea un objeto Pokemon auxiliar y realiza los bindings necesarios.
+     */
     public void initialize() {
         dobleClick();
 
@@ -82,7 +84,12 @@ public class HelloController {
         realizarBindingsPokeAux(pokeAux);
 
     }
-
+    /**
+     * Realiza los bindings bidireccionales entre las propiedades del objeto Pokemon y los componentes de la interfaz de usuario.
+     * Los bindings aseguran que los valores de las propiedades y los componentes estén siempre sincronizados.
+     *
+     * @param poke El objeto Pokemon al que se le realizarán los bindings.
+     */
     private void realizarBindingsPokeAux(Pokemon poke) {
 
         txtID.textProperty().bindBidirectional(poke.IDpokeProperty(), new NumberStringConverter());
@@ -96,7 +103,14 @@ public class HelloController {
         txtTipo.textProperty().bindBidirectional(poke.dualtypeProperty(), new NumberStringConverter());
 
     }
-
+    /**
+     * Maneja el evento de clic en el botón de Alta.
+     * Si el ID del Pokemon auxiliar es mayor o igual a cero, se intenta dar de alta el Pokemon utilizando el objeto PokeDAO.
+     * Si el alta es exitosa, se cargan los datos actualizados en la tabla.
+     * En caso contrario, se muestra una alerta informando que se debe introducir un código de producto válido.
+     *
+     * @param actionEvent El evento de acción generado por el clic en el botón de Alta.
+     */
     public void onAltaClicked(ActionEvent actionEvent) {
         if ( pokeAux.getIDpoke() >= 0) {
             if (pokeDAO.altaPokemon(pokeAux)) {
@@ -109,7 +123,15 @@ public class HelloController {
 
 
     }
-
+    /**
+     * Maneja el evento de clic en el botón de Borrar.
+     * Muestra una alerta de confirmación para confirmar si el usuario desea borrar la columna del Pokemon auxiliar.
+     * Si el usuario confirma, se intenta borrar la columna utilizando el objeto DAO.
+     * Si el borrado es exitoso, se muestra una alerta informativa y se cargan los datos actualizados en la tabla.
+     * En caso contrario, se muestra una alerta indicando que los datos no han sido borrados.
+     *
+     * @param actionEvent El evento de acción generado por el clic en el botón de Borrar.
+     */
     public void onBorrarClicked(ActionEvent actionEvent) {
         Alert alert;
         String Codigo = String.valueOf(pokeAux.getIDpoke());
@@ -130,13 +152,23 @@ public class HelloController {
 
 
     }
-
+    /**
+     * Maneja el evento de clic en el botón de Actualizar.
+     * Carga los datos actualizados en la tabla.
+     *
+     * @param actionEvent El evento de acción generado por el clic en el botón de Actualizar.
+     */
     public void onActualizarClicked(ActionEvent actionEvent) {
         cargarDatosTabla();
 
 
     }
-
+    /**
+     * Carga los datos de Pokemon en la tabla.
+     * Obtiene los datos de Pokemon utilizando el objeto PokeDAO y los asigna a la variable "datos".
+     * Luego, configura las propiedades de cada columna de la tabla para mostrar los datos correspondientes.
+     * Finalmente, asigna los datos a la tabla.
+     */
     private void cargarDatosTabla() {
         datos = pokeDAO.obtenerPokemon();
 
@@ -152,7 +184,11 @@ public class HelloController {
 
         tvPokemon.setItems(datos);
     }
-
+    /**
+     * Configura el comportamiento de doble clic en la tabla de Pokemon.
+     * Al hacer doble clic en una fila de la tabla, se asignan los valores de los Pokemon seleccionado al Pokemon auxiliar.
+     * Esto permite seleccionar un Pokemon de la tabla para su edición o visualización detallada.
+     */
     private void dobleClick() {
         tvPokemon.setRowFactory(tv -> {
             TableRow<Pokemon> row = new TableRow<>();
@@ -172,6 +208,13 @@ public class HelloController {
             return row;
         });
     }
+    /**
+     * Maneja el evento de clic en el botón de Imprimir Listado.
+     * Intenta mostrar un informe Jasper utilizando la clase JasperReports.
+     * Captura y maneja posibles excepciones de ClassNotFoundException, JRException y SQLException.
+     *
+     * @param actionEvent El evento de acción generado por el clic en el botón de Imprimir Listado.
+     */
     public void onImprimirListadoClick(ActionEvent actionEvent) {
         try {
             // --- Show Jasper Report on click-----

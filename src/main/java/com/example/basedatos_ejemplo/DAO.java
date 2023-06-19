@@ -15,7 +15,13 @@ public class DAO {
 
     private Connection conexionBBDD;
 
+    /**
+     * Obtiene una lista observable de Pokemon a partir de una consulta a la base de datos.
+     *
+     * @return Una lista observable de Pokemon que contiene los datos obtenidos de la consulta.
+     */
     public ObservableList<Pokemon> obtenerPokemon() {
+
 
         ObservableList<Pokemon> datosResultadoConsulta = FXCollections.observableArrayList();
         try {
@@ -50,7 +56,12 @@ public class DAO {
             return datosResultadoConsulta;
         }
     }
-
+    /**
+     * Realiza una operación de alta (inserción) de un Pokemon en la base de datos.
+     *
+     * @param poke El objeto Pokemon que se va a dar de alta.
+     * @return true si el alta se realiza correctamente, false en caso contrario.
+     */
     public Boolean altaPokemon(Pokemon poke) {
 
         int registrosAfectadosConsulta = 0;
@@ -96,6 +107,12 @@ public class DAO {
             return false;
         }
     }
+    /**
+     * Realiza una operación de borrado de un Pokemon en la base de datos.
+     *
+     * @param poke El objeto Pokemon que se va a borrar.
+     * @return true si el borrado se realiza correctamente, false en caso contrario.
+     */
     public Boolean borrarProducto(Pokemon poke) {
 
         int registrosAfectadosConsulta = 0;
@@ -126,6 +143,12 @@ public class DAO {
             return false;
         }
     }
+    /**
+     * Realiza una operación de actualización de un Pokemon en la base de datos.
+     *
+     * @param poke El objeto Pokemon que se va a actualizar.
+     * @return true si la actualización se realiza correctamente, false en caso contrario.
+     */
     public Boolean actualizarProducto(Pokemon poke) {
 
         int registrosAfectadosConsulta = 0;

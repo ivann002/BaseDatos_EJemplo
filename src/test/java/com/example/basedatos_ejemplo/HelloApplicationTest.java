@@ -1,9 +1,14 @@
 package com.example.basedatos_ejemplo;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TableView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxAssert;
 import org.testfx.api.FxRobot;
@@ -29,7 +34,8 @@ class HelloAplicationTest {
         stage.setScene(scene);
         stage.show();
     }
-    void validar (FxRobot robot) throws InterruptedException{
+    @Test
+    void validar (FxRobot robot){
         robot.clickOn("#id");
         robot.write("1");
         robot.clickOn("#nombre");
